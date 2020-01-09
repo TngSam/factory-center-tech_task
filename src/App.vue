@@ -1,32 +1,76 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
     <router-view/>
+    <footer>
+        &copy; Тестовое задание 2020
+    </footer>
   </div>
 </template>
 
 <style lang="scss">
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #EBEBEB;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+a, a:visited {
+  color: #1F8C8D;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
+  padding: 1rem 2rem;
 
-  a {
+  min-height: 92.5vh;
+
+  button {
+    background-color: #1F8C8D;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    color: white;
+    padding: .625rem 1.5rem;
+    border-radius: 5px;
     font-weight: bold;
-    color: #2c3e50;
+    font-size: 1.25rem;
+  }
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
+  main {
+      margin-top: 5rem;
+      ul {
+          list-style: none;
+
+          li {
+              display: flex;
+              align-items: center;
+          }
+      }
+  }
+
+  footer {
+    position: relative;
+    text-align: center;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    color: #AFAFAF;
+    font-weight: bold;
   }
 }
 </style>
